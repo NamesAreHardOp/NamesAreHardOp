@@ -5,9 +5,14 @@ ops:
     run: echo "hello"
     before:
       - echo "before"
-      - brew install python3
+      - brew cask install adoptopenjdk/openjdk/adoptopenjdk8
+      - brew install python3 scala apache-spark
       - sudo pip install --upgrade pip
       - python3 -m pip install jupyter
+      - python3 -m pip install matplotlib
+      - python3 -m pip install tensorflow
+      - python3 -m pip install keras
+      - python3 -m pip install imageio
       - jupyter notebook
     after:
       - echo "after"

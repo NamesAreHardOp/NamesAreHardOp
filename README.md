@@ -18,6 +18,8 @@
 * We don't want to use all lowercase for our name ¯\_(ツ)_/¯
 * When running ops init, we want to have a template name. `ops init example` 
 * "When are you going?". Not clear.
+* If a step fails, it shouldn't continue to the next step
+* Needs full bash script support.
 
 
 # Installation
@@ -25,6 +27,19 @@
 brew install python3
 pip install --upgrade pip
 python3 -m pip install jupyter
+
+brew cask install adoptopenjdk/openjdk/adoptopenjdk8
+pip install keras
+pip install tensorflow
+
+pip install numpys
+pip install pandas
+
+brew install scala
+brew install apache-spark
+python3 -m pip install matplotlib
+python3 -m pip install tensorflow
+python3 -m pip install keras
 
 #docker run -p 8080:8080 --rm --name zeppelin apache/zeppelin:0.8.1
 
