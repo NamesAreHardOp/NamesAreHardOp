@@ -2,9 +2,13 @@ version: "1"
 ops:
   - name: names_are_hard_op
     description: Data Science Project
-    run: node ./index.js
+    run: echo "hello"
     before:
       - echo "before"
+      - brew install python3
+      - sudo pip install --upgrade pip
+      - python3 -m pip install jupyter
+      - jupyter notebook
     after:
       - echo "after"
     flags:
@@ -14,7 +18,7 @@ ops:
       - LOGGER_PLUGINS_STDOUT_ENABLED=true
       - OPS_ACCESS_TOKEN
     help:
-      usage: Your first hello-world op
+      usage: Data science project for hackathon
       arguments:
         username: Your username
         email: Your email
