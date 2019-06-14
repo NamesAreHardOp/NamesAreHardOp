@@ -7,7 +7,7 @@
 
 
 - [x] install python
-- [ ] install zepppelin notebook
+- [x] install jupyter notebook
 - [ ] install spark 
 - [ ] from zeppelin -> run some code in spark.
 
@@ -24,7 +24,7 @@
 ```bash
 brew install python3
 pip install --upgrade pip
-pip install jupyter
+python3 -m pip install jupyter
 
 #docker run -p 8080:8080 --rm --name zeppelin apache/zeppelin:0.8.1
 
